@@ -35,30 +35,83 @@
 @media(max-width:600px){.power-stage{min-height:175px;padding:15px 0;grid-template-columns:minmax(56px,1fr) minmax(30px,.45fr) minmax(175px,3fr)}.power-cocoon-wrap{min-height:102px}.power-cocoon{width:61px;height:94px}.power-label{font-size:.69rem;letter-spacing:.12em}.power-finale h2{font-size:clamp(2rem,8.2vw,3.2rem)}.power-lines path{stroke-width:4}}
 @media(prefers-reduced-motion:reduce){.power-lines path,.power-cocoon-wrap::before,.power-arrow,.power-butterfly::before,.power-butterfly img{animation:none!important}}
 
+
+/* Original user-supplied painted-paper caterpillar + cocoon */
+.hero-caterpillar{position:absolute;z-index:3;left:-6%;bottom:20px;width:min(365px,82%);height:auto;display:block;object-fit:contain;filter:drop-shadow(0 9px 4px rgba(41,84,23,.19));transform:rotate(-3deg);animation:story-crawl 5.8s ease-in-out infinite}
+@keyframes story-crawl{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-9px) rotate(-1deg)}}
+.power-stage{grid-template-columns:minmax(150px,1.35fr) minmax(35px,.27fr) minmax(75px,.66fr) minmax(35px,.27fr) minmax(175px,1.68fr);gap:clamp(3px,.8vw,12px);min-height:265px;padding:26px 0}
+.power-caterpillar{position:relative;z-index:3;display:grid;place-items:center}
+.power-caterpillar img{width:100%;max-width:295px;height:auto;display:block;filter:drop-shadow(0 0 13px rgba(67,219,151,.32))}
+.power-cocoon-wrap{min-height:180px}
+.power-cocoon-wrap::before{inset:-4px}
+.power-cocoon-img{height:190px;max-width:100%;object-fit:contain;position:relative;z-index:2;filter:drop-shadow(0 0 14px rgba(255,175,77,.35))}
+.power-butterfly img{max-width:400px}
+@media(max-width:600px){
+  .hero-caterpillar{width:260px;left:50%;bottom:12px;animation:none;transform:translateX(-50%) rotate(-2deg)}
+  .power-stage{display:flex;flex-direction:column;align-items:center;gap:5px;padding:18px 0}
+  .power-caterpillar img{width:min(300px,85vw)}
+  .power-cocoon-wrap{min-height:155px}
+  .power-cocoon-img{height:152px}
+  .power-butterfly img{width:min(350px,88vw)}
+  .power-lines{display:none}
+}
+@media(prefers-reduced-motion:reduce){.hero-caterpillar{animation:none}}
+/* A warm, naturally integrated faith and birthday milestone interlude */
+.grace-section{position:relative;padding:68px 0;background:#f7efcf;background-image:radial-gradient(rgba(205,144,44,.12) 1.2px,transparent 1.2px);background-size:22px 22px}
+.grace-card{position:relative;isolation:isolate;overflow:hidden;max-width:990px;margin:auto;padding:clamp(38px,7vw,75px) clamp(21px,6vw,72px);border-radius:42px 27px 45px 31px;background:#fffdf2;text-align:center;border:3px solid #e8d78a;box-shadow:0 16px 0 rgba(176,137,49,.12),0 22px 46px rgba(100,72,22,.09)}
+.grace-card:before{content:"";position:absolute;z-index:-1;inset:14px;border:2px dashed #d7dca5;border-radius:32px 19px 35px 23px;pointer-events:none}
+.grace-kicker{display:inline-block;letter-spacing:.2em;color:#27833c;font-size:.79rem;font-weight:1000}
+.grace-fruits{display:flex;gap:16px;align-items:center;justify-content:center;margin:20px 0 5px;font-size:1.8rem}
+.grace-fruits span{display:inline-block;transform:rotate(-8deg)}
+.grace-fruits span:nth-child(even){transform:rotate(9deg)}
+.grace-section h2{font-size:clamp(2.5rem,6vw,5rem);line-height:1.08;letter-spacing:-.055em;color:#236e37;margin:10px auto}
+.grace-section h2 em{font-style:normal;color:#d63f35}
+.grace-subtitle{font-size:clamp(1.16rem,2.8vw,1.65rem);color:#6b5635;margin:15px 0 20px;line-height:1.45}
+.grace-subtitle strong{color:#236e37}
+.grace-divider{color:#e5a632;letter-spacing:.45em;font-size:1.1rem;margin:24px 0 19px}
+.grace-divider span{font-size:.7rem}
+.grace-verse{margin:0 auto;font-size:clamp(1.13rem,2.65vw,1.72rem);max-width:700px;line-height:1.6;font-style:italic;font-family:Georgia,serif;color:#3c4230}
+.grace-reference{font-size:.86rem;color:#9b5d21;letter-spacing:.19em;font-weight:1000;margin:20px 0}
+.grace-tail{margin:20px 0 0;font-size:1rem;color:#6b6044}
+
 </style>
 </head>
 <body>
-<header class="nav"><div class="wrap"><a class="brand" href="#home">🐛 Drei Turns 7</a><nav class="links"><a href="#details">Details</a><a href="#dress">Dress Code</a><a href="#journey">Journey</a><a href="#rsvp">RSVP</a></nav></div></header>
+<header class="nav"><div class="wrap"><a class="brand" href="#home">🐛 Drei Turns 7</a><nav class="links"><a href="#details">Details</a><a href="#grace">Seven Years of Grace</a><a href="#dress">Dress Code</a><a href="#journey">Journey</a><a href="#rsvp">RSVP</a></nav></div></header>
 <main id="home">
-<section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">A colorful storybook celebration</div><h1>Drei's Very Hungry <span class="seven">7th</span> Birthday</h1><p class="lead">Six wonderful years of growing, learning and laughter… and now Drei is turning <strong>SEVEN!</strong></p><div class="chips"><span class="chip">📅 Friday, January 8, 2027</span><span class="chip">📍 Venue: To Be Announced</span><span class="chip">⏰ Time: To Be Announced</span></div><div class="buttons"><a class="btn red" href="#details">Party Details</a><a class="btn yellow" href="#rsvp">RSVP</a></div></div><div class="art"><figure class="portrait"><img id="dreiImg" alt="Colorful caricature of Drei wearing glasses"><figcaption class="tag">Almost 7! ✨</figcaption></figure><div class="worm" aria-hidden="true"><i class="seg s1"></i><i class="seg s2"></i><i class="seg s3"></i><i class="seg s4"></i><i class="seg s5"></i><b class="head"><i class="eye e1"></i><i class="eye e2"></i></b></div><div class="branch"></div></div></div></section>
+<section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">A colorful storybook celebration · Seven Years of Grace</div><h1>Drei's Very Hungry <span class="seven">7th</span> Birthday</h1><p class="lead">Six wonderful years of growing, learning and laughter… and now Drei is turning <strong>SEVEN!</strong></p><div class="chips"><span class="chip">📅 Friday, January 8, 2027</span><span class="chip">📍 Venue: To Be Announced</span><span class="chip">⏰ Time: To Be Announced</span></div><div class="buttons"><a class="btn red" href="#details">Party Details</a><a class="btn yellow" href="#rsvp">RSVP</a></div></div><div class="art"><figure class="portrait"><img id="dreiImg" alt="Colorful caricature of Drei wearing glasses"><figcaption class="tag">Almost 7! ✨</figcaption></figure><img class="hero-caterpillar" src="assets/caterpillar-story.webp" alt="Colorful painted green caterpillar with a red head" width="1050" height="653" fetchpriority="high"><div class="branch"></div></div></div></section>
 <section class="section count-sec center"><div class="wrap"><div class="eyebrow">Drei's big day begins in…</div><h2>Countdown to Seven</h2><p class="sub">Counting down to January 8 in the UAE.</p><div class="countdown"><div class="fruit f1"><strong id="days">--</strong><span>Days</span></div><div class="fruit f2"><strong id="hours">--</strong><span>Hours</span></div><div class="fruit f3"><strong id="minutes">--</strong><span>Minutes</span></div><div class="fruit f4"><strong id="seconds">--</strong><span>Seconds</span></div></div></div></section>
 <section class="section details center" id="details"><div class="wrap"><div class="eyebrow">Save the date</div><h2>A little party is growing…</h2><p class="sub">Keep this invitation link. The same page will be updated when the final venue and time are ready.</p><div class="cards"><article class="card"><div class="icon">🗓️</div><h3>Date</h3><p>Friday<br><strong>January 8, 2027</strong></p></article><article class="card"><div class="icon">⏰</div><h3>Time</h3><p><strong>To Be Announced</strong><br>More details coming soon.</p></article><article class="card"><div class="icon">📍</div><h3>Venue</h3><p><strong>To Be Announced</strong><br>A special place is being prepared.</p></article></div></div></section>
+<section class="section grace-section" id="grace" aria-labelledby="grace-title">
+  <div class="wrap">
+    <div class="grace-card">
+      <span class="grace-kicker">DREI'S 7TH BIRTHDAY</span>
+      <div class="grace-fruits" aria-hidden="true"><span>🍎</span><span>🍐</span><span>🍓</span><span>🦋</span></div>
+      <h2 id="grace-title">Seven Years of <em>Grace</em></h2>
+      <p class="grace-subtitle">A New Season of <strong>Wisdom, Faith &amp; Courage</strong></p>
+      <div class="grace-divider" aria-hidden="true">✦ <span>✦</span> ✦</div>
+      <blockquote class="grace-verse">“Growing in wisdom and stature,<br>and in favor with God and man.”</blockquote>
+      <p class="grace-reference">LUKE 2:52</p>
+      <p class="grace-tail">Celebrating seven wonderful years of God's goodness in Drei's life.</p>
+    </div>
+  </div>
+</section>
 <section class="section dress" id="dress"><div class="wrap dress-grid"><div><div class="eyebrow">Come dressed for the garden</div><h2>Colorful Caterpillar Garden</h2><p style="font-size:1.18rem;line-height:1.65">Wear bright, playful colors inspired by fruit, leaves, flowers and butterflies.</p><div class="palette"><span>❤️ Red</span><span>💚 Green</span><span>💛 Yellow</span><span>💙 Blue</span><span>🧡 Orange</span><span>💜 Purple</span></div><p>Fruit prints, florals, leafy patterns and colorful accessories are welcome. Costumes are optional—bright and cheerful is perfect!</p></div><div class="outfits"><div class="outfit">👕</div><div class="outfit">👗</div><div class="outfit">🌿</div><div class="outfit">🍓</div><div class="outfit">🦋</div><div class="outfit">🍊</div></div></div></section>
 <section class="section journey center" id="journey"><div class="wrap"><div class="eyebrow">Drei's journey to 7</div><h2>Seven years of growing</h2><p class="sub">Every year brought something new—and the biggest little adventure is just beginning.</p><div class="timeline"><div class="step"><b>1</b><small>Wonder</small></div><div class="step"><b>2</b><small>Curiosity</small></div><div class="step"><b>3</b><small>Laughter</small></div><div class="step"><b>4</b><small>Play</small></div><div class="step"><b>5</b><small>Friends</small></div><div class="step"><b>6</b><small>Adventure</small></div><div class="step"><b>7</b><small>Birthday!</small></div></div></div></section>
 <section class="section rsvp" id="rsvp"><div class="wrap"><div class="rsvp-box"><div class="eyebrow">Will you celebrate with us?</div><h2>RSVP</h2><p class="sub">The RSVP form will open together with the final venue and party time. Come back to this same page—nothing else to save.</p><span class="coming">RSVP opening soon 🐛</span></div></div></section>
 <section class="section finale power-finale" id="metamorphosis">
  <div class="wrap">
   <span class="power-label">⚡ LEVEL 7 UNLOCKED ⚡</span>
-  <div class="power-stage" aria-label="From cocoon to colorful butterfly in a burst of blue electric energy">
-    <div class="power-cocoon-wrap"><div class="power-cocoon" aria-hidden="true"></div></div>
+  <div class="power-stage" aria-label="Drei's storybook metamorphosis from caterpillar to cocoon to butterfly, energized with blue lightning">
+    <div class="power-caterpillar" aria-label="Caterpillar stage"><img src="assets/caterpillar-story.webp" alt="The colorful caterpillar at the start of the journey" width="1050" height="653" loading="lazy"></div>
     <div class="power-arrow" aria-hidden="true">⚡</div>
-    <div class="power-butterfly">
-      <img src="assets/butterfly-electric.webp" alt="The colorful painted butterfly from Drei's birthday story, surrounded by a heroic electric glow" width="360" height="193" loading="lazy">
-    </div>
-    <svg class="power-lines" viewBox="0 0 950 310" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M105 118 L150 66 L180 120 L229 84 L260 153 L350 123 L411 150 L470 95"/>
-      <path d="M150 252 L201 213 L231 258 L287 194 L339 229 L421 177 L475 200"/>
-      <path d="M500 43 L526 90 L570 68 L617 115 L677 86 L718 124 L776 78"/>
+    <div class="power-cocoon-wrap" aria-label="Cocoon stage"><img class="power-cocoon-img" src="assets/cocoon-story.webp" alt="Brown and orange painted cocoon" width="610" height="1036" loading="lazy"></div>
+    <div class="power-arrow" aria-hidden="true">⚡</div>
+    <div class="power-butterfly"><img src="assets/butterfly-electric.webp" alt="Colorful painted butterfly revealed with a heroic electric glow" width="360" height="193" loading="lazy"></div>
+    <svg class="power-lines" viewBox="0 0 1200 370" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M160 100 L205 64 L240 125 L295 77 L342 138 L418 94 L463 152"/>
+      <path d="M585 190 L635 130 L678 186 L727 133 L787 192 L855 126"/>
+      <path d="M810 58 L842 102 L876 66 L912 122 L957 92 L992 134 L1056 79"/>
     </svg>
   </div>
   <div class="eyebrow">The next adventure begins</div>
